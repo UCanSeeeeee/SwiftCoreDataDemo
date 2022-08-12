@@ -16,8 +16,8 @@
 		D15BC85F28A548D20065D2B9 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15BC85E28A548D20065D2B9 /* MainNavigationController.swift */; };
 		D1CA025728A5FEFB00709C25 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA025628A5FEFB00709C25 /* APICaller.swift */; };
 		D1CA025928A6023300709C25 /* CoreDataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA025828A6023300709C25 /* CoreDataItemModel.swift */; };
-		D1CA025C28A603EE00709C25 /* CoreDataItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA025A28A603EE00709C25 /* CoreDataItem+CoreDataClass.swift */; };
-		D1CA025D28A603EE00709C25 /* CoreDataItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA025B28A603EE00709C25 /* CoreDataItem+CoreDataProperties.swift */; };
+		D1CA026128A6192700709C25 /* CoreDataItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA025F28A6192700709C25 /* CoreDataItem+CoreDataClass.swift */; };
+		D1CA026228A6192700709C25 /* CoreDataItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA026028A6192700709C25 /* CoreDataItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +32,8 @@
 		D15BC85E28A548D20065D2B9 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		D1CA025628A5FEFB00709C25 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		D1CA025828A6023300709C25 /* CoreDataItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataItemModel.swift; sourceTree = "<group>"; };
-		D1CA025A28A603EE00709C25 /* CoreDataItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D1CA025B28A603EE00709C25 /* CoreDataItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D1CA025F28A6192700709C25 /* CoreDataItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D1CA026028A6192700709C25 /* CoreDataItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,8 @@
 		D15BC84628A528E10065D2B9 /* 1stCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				D1CA025E28A603FA00709C25 /* CoreDataItem */,
+				D1CA025F28A6192700709C25 /* CoreDataItem+CoreDataClass.swift */,
+				D1CA026028A6192700709C25 /* CoreDataItem+CoreDataProperties.swift */,
 				D15BC84728A528E10065D2B9 /* AppDelegate.swift */,
 				D15BC84928A528E10065D2B9 /* SceneDelegate.swift */,
 				D1CA025628A5FEFB00709C25 /* APICaller.swift */,
@@ -79,15 +80,6 @@
 				D15BC85528A528E20065D2B9 /* LaunchScreen.storyboard */,
 			);
 			path = 1stCoreData;
-			sourceTree = "<group>";
-		};
-		D1CA025E28A603FA00709C25 /* CoreDataItem */ = {
-			isa = PBXGroup;
-			children = (
-				D1CA025A28A603EE00709C25 /* CoreDataItem+CoreDataClass.swift */,
-				D1CA025B28A603EE00709C25 /* CoreDataItem+CoreDataProperties.swift */,
-			);
-			path = CoreDataItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +154,9 @@
 			files = (
 				D1CA025928A6023300709C25 /* CoreDataItemModel.swift in Sources */,
 				D15BC85F28A548D20065D2B9 /* MainNavigationController.swift in Sources */,
-				D1CA025C28A603EE00709C25 /* CoreDataItem+CoreDataClass.swift in Sources */,
+				D1CA026128A6192700709C25 /* CoreDataItem+CoreDataClass.swift in Sources */,
 				D15BC84C28A528E10065D2B9 /* ViewController.swift in Sources */,
-				D1CA025D28A603EE00709C25 /* CoreDataItem+CoreDataProperties.swift in Sources */,
+				D1CA026228A6192700709C25 /* CoreDataItem+CoreDataProperties.swift in Sources */,
 				D15BC85228A528E10065D2B9 /* _stCoreData.xcdatamodeld in Sources */,
 				D15BC84828A528E10065D2B9 /* AppDelegate.swift in Sources */,
 				D15BC84A28A528E10065D2B9 /* SceneDelegate.swift in Sources */,
