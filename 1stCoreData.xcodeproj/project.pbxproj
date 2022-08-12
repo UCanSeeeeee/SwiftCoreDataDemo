@@ -18,6 +18,7 @@
 		D1CA025928A6023300709C25 /* CoreDataItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA025828A6023300709C25 /* CoreDataItemModel.swift */; };
 		D1CA026128A6192700709C25 /* CoreDataItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA025F28A6192700709C25 /* CoreDataItem+CoreDataClass.swift */; };
 		D1CA026228A6192700709C25 /* CoreDataItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA026028A6192700709C25 /* CoreDataItem+CoreDataProperties.swift */; };
+		D1CA026428A619B800709C25 /* Titles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CA026328A619B800709C25 /* Titles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D1CA025828A6023300709C25 /* CoreDataItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataItemModel.swift; sourceTree = "<group>"; };
 		D1CA025F28A6192700709C25 /* CoreDataItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D1CA026028A6192700709C25 /* CoreDataItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D1CA026328A619B800709C25 /* Titles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Titles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				D15BC84728A528E10065D2B9 /* AppDelegate.swift */,
 				D15BC84928A528E10065D2B9 /* SceneDelegate.swift */,
 				D1CA025628A5FEFB00709C25 /* APICaller.swift */,
+				D1CA026328A619B800709C25 /* Titles.swift */,
 				D1CA025828A6023300709C25 /* CoreDataItemModel.swift */,
 				D15BC84B28A528E10065D2B9 /* ViewController.swift */,
 				D15BC85E28A548D20065D2B9 /* MainNavigationController.swift */,
@@ -156,6 +159,7 @@
 				D15BC85F28A548D20065D2B9 /* MainNavigationController.swift in Sources */,
 				D1CA026128A6192700709C25 /* CoreDataItem+CoreDataClass.swift in Sources */,
 				D15BC84C28A528E10065D2B9 /* ViewController.swift in Sources */,
+				D1CA026428A619B800709C25 /* Titles.swift in Sources */,
 				D1CA026228A6192700709C25 /* CoreDataItem+CoreDataProperties.swift in Sources */,
 				D15BC85228A528E10065D2B9 /* _stCoreData.xcdatamodeld in Sources */,
 				D15BC84828A528E10065D2B9 /* AppDelegate.swift in Sources */,

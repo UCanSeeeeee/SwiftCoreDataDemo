@@ -10,7 +10,8 @@ import CoreData
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
-    
+
+
     var tableview: UITableView = {
         let tableview = UITableView()
         tableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -26,18 +27,20 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         navigationItem.title = "Do it"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
-        
+
         view.addSubview(tableview)
+        configure()
         getallItems()
+        
         tableview.frame = view.bounds
         tableview.delegate = self
         tableview.dataSource = self
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(didTapAdd))
     }
     
+    // 添加action
     @objc private func didTapAdd() {
         let alert = UIAlertController(title: "New Item", message: "Enter new item", preferredStyle: .alert)
         alert.addTextField(configurationHandler: nil)
@@ -50,15 +53,33 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         present(alert, animated: true)
     }
     
+    // 增添部分：用api获取初始数据
+    public func configure() {
+        APICaller.shared.getMovies { [weak self] result in
+            switch result {
+            case .success(let titles):
+                for item in titles {
+                    self?.createItem(itemName: item.original_title ?? "Not Found")
+//                    print(item)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            self?.tableview.reloadData()
+        }
+        
+    }
+    
     func getallItems() {
         do {
             models = try context.fetch(CoreDataItem.fetchRequest())
             DispatchQueue.main.async {
                 self.tableview.reloadData()
             }
-        } catch {
-            
-        }
+        } catch { }
     }
     
     func createItem(itemName: String) {
@@ -68,9 +89,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         do {
             try context.save()
             getallItems()
-        } catch {
-            
-        }
+        } catch { }
     }
     
     func deleteItem(item: CoreDataItem) {
@@ -78,9 +97,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         do {
             try context.save()
             getallItems()
-        } catch {
-            
-        }
+        } catch { }
         
     }
     
@@ -89,9 +106,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         do {
             try context.save()
             getallItems()
-        } catch {
-            
-        }
+        } catch { }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,11 +114,9 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableview.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].itemName
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
